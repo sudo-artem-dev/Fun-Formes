@@ -15,8 +15,8 @@ Pour obtenir plus d'aide sur Angular CLI, exécutez `ng help` ou consultez la pa
 
 ## Configurez la base de données
 
-Dans le fichier src/main/resources/application.properties, configurez votre base de données,
-Assurez-vous de modifier ces valeurs en fonction de votre environnement.
+Dans le fichier `src/main/resources/application.properties`, configurez votre base de données,
+Modifiez ces valeurs en fonction de votre environnement. Vérifiez que votre base de données est bien en cours d'exécution.
 
 ## Construisez le projet avec Maven
 
