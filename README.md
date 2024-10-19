@@ -1,5 +1,7 @@
 # FrontFunFormes
 
+Le Fun Formes est une application web éducative qui permet d'observer un dessin contenant des figures géométriques et remplir un tableau en indiquant le nombre de chaque type de figure.
+
 Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
 
 ## Serveur de développement
