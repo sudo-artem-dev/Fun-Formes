@@ -1,0 +1,61 @@
+.regle-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto; 
+   border : 2px solid #FFA500; 
+
+}
+
+h1 {
+    color: #FFA500; 
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+}
+
+h2 {
+    color: #FFA500; 
+}
+
+p, ul, ol {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.2em; 
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+/* i{
+    font-size: 3em;
+    padding: 0.5em 1em;
+} */
+.regle-button {
+    background-color: #00b9d1; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.5em; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+    font-family: 'Bubblegum Sans', cursive; 
+    margin-bottom: 10px; /* Espace entre les boutons */
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .regle-button:hover {
+    background-color: #FFA500;
+    color: white;
+  }
+  .regle-button i {
+    margin-right: 8px; 
+  }
+.regle-button:active {
+  background-color: #e69500; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transform: translateY(2px); 
+  }

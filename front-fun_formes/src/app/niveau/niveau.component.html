@@ -1,0 +1,67 @@
+<button class="accueil-button" (click)="goToHome()">
+    <i class="fas fa-home"></i> Accueil
+  </button>
+<div *ngIf="dessins.length > 0; else noDessins">
+    <div style="display: flex; justify-content: space-between;">
+        <div *ngFor="let dessin of dessins" style="flex: 1; ">
+            <h2 style="text-align: center;">{{ dessin.nom }}</h2>
+            <canvas 
+                #dessinCanvas 
+                width="800" 
+                height="800" 
+                style="
+                    border-radius: 15px;
+                    display: block;
+                    margin: 0 auto; 
+                    margin-left: 10em;
+                    border: 2px solid #f39c12;  
+                    backdrop-filter: blur(5px);
+                    ">
+            </canvas>
+        </div>
+      <!-- Formulaire de comptage des figures -->
+      <div class="table-container" style="flex: 1;">
+        <form [formGroup]="figureForm" (ngSubmit)="onSubmit()">
+            <div class="form-container ">
+
+                <div class="barre-progression">
+                    <p> {{dessinsTermines}} / 5</p>
+                </div>
+                <div class="form-item">
+                    <img src="assets/triangle.png" alt="triangle" class="shape">
+                    <span>=</span>
+                    <input type="number" formControlName="triangle" class="input-box" min="0">
+                </div>
+                
+                <div class="form-item">
+                    <img src="assets/cercle.png" alt="cercle" class="shape">
+                    <span>=</span>
+                    <input type="number" formControlName="cercle" class="input-box" min="0">
+                </div>
+                
+                <div class="form-item">
+                    <img src="assets/rectangle.png" alt="rectangle" class="shape">
+                    <span>=</span>
+                    <input type="number" formControlName="rectangle" class="input-box" min="0">
+                </div>
+                
+                <div class="form-item">
+                    <img src="assets/carre.jpg" alt="carré" class="shape">
+                    <span>=</span>
+                    <input type="number" formControlName="carre" class="input-box" min="0">
+                </div>
+
+                <button type="submit" [disabled]="figureForm.invalid" [disabled]="popupCorrectionOuvert" class="ok-button">OK</button>
+                <button type="button" (click)="openPopupPasser()" [disabled]="popupPasserOuvert" class="pass-button">Passer</button>
+
+            </div>
+
+        </form>
+    </div>   
+</div>        
+     
+</div>
+
+<ng-template #noDessins>
+    <h2 class="noDessins">Aucun dessin disponible.</h2>
+</ng-template>

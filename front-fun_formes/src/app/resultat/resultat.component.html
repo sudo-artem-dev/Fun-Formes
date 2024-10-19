@@ -1,0 +1,15 @@
+<div class="confirmation-content">
+    <h1>Le jeu est terminé</h1>
+    <ng-container *ngIf="niveau === 'facile'">
+        <p>Votre score facile : {{ scoreFacile }} / 5 </p>
+    </ng-container>
+    <ng-container *ngIf="niveau === 'difficile'">
+        <p>Votre score difficile : {{ scoreDifficile }} / 5 </p>
+    </ng-container>
+    <button (click)="close()" class="close-button">
+        <i class="fas fa-times close-icon"></i>
+    </button>
+    <button class="accueil-button" (click)="goToHome()">
+        <i class="fas fa-home"></i> Accueil
+    </button>
+</div>

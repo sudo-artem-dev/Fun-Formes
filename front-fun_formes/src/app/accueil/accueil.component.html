@@ -1,0 +1,41 @@
+<div class="video-background">
+  <video autoplay muted>
+  <source src="../assets/winter2 (1).mp4" type="video/mp4"> 
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+</div>
+<div class="container">
+
+  <h1>Fun Formes</h1>
+
+  <div class="character-container">
+      <img src="assets/funformes.png" alt="Fun-Formes" class="character">
+  </div>
+
+  <div class="niveau-container">
+    <div class="niveau">
+        <button class="niveau-button" (click)="goToNiveau('facile', '1')">Niveau Facile</button>
+        <p class="indice"> {{ scoreFacile }} / 5</p>
+    </div>
+    <div class="niveau">
+        <button class="niveau-button" (click)="goToNiveau('difficile', '7')">Niveau Difficile</button>
+        <p class="indice"> {{ scoreDifficile }} / 5</p>
+    </div>
+  </div>
+
+  <div class="admin-regle-container">
+    <button class="regle-button" (click)="goToRegles()">
+      <i class="fas fa-book"></i> Règles
+    </button>
+    <button class="regle-button" (click)="goToAdmin()">
+      <i class="fas fa-cogs"></i> Admin
+    </button>
+  </div>
+  
+
+
+  
+  <p class="footer">made by TATKOV Artem</p>
+</div>
+
+  

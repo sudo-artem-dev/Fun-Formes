@@ -1,0 +1,16 @@
+<div class="confirmation-content">
+    <h1>Les nombres ne correspondent pas!</h1>
+    <div *ngIf="nombreParType && nombreParType.length > 0">
+        <p>Corrigé :</p>
+        <ul>
+            <li *ngFor="let type of nombreParType">
+                {{ type.type }} : {{ type.nombre }}
+            </li>
+        </ul>
+    </div>
+    <p *ngIf="nombreParType && nombreParType.length === 0">Aucun type disponible.</p>
+    <button (click)="close()" class="close-button">
+        <i class="fas fa-times close-icon"></i>
+    </button>
+    <button type="button" (click)="onPass()" class="ok-button">Prochain Dessin</button>
+</div>
